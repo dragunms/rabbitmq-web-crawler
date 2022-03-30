@@ -1,0 +1,3 @@
+import './workerCrawlAnime';
+
+import './workerSyncAnime';

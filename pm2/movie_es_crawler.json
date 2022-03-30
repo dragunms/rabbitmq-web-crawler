@@ -1,0 +1,34 @@
+{
+    "apps": [
+        {
+            "namespace": "movie_es",
+            "name": "worker-movie_es",
+            "script": "index.js",
+            "instances": "max",
+            "exec_mode": "cluster",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "movie_es",
+                "SERVICES": ["worker"]
+            }
+        },
+        {
+            "namespace": "movie_es",
+            "name": "schedule-movie_es",
+            "script": "index.js",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "movie_es",
+                "SERVICES": ["schedule"]
+            }
+        }
+    ]
+}

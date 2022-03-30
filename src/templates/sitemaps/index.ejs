@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc><%= domain + '/sitemap-home-1.xml' %></loc>
+    </sitemap>
+    <sitemap>
+        <loc><%= domain + '/sitemap-static-page-1.xml' %></loc>
+    </sitemap>
+    <% listIndex.forEach(function (item) { %>
+        <% for(var i = 1; i <= item.total; i++) { %>
+            <sitemap>
+                <loc><%= domain + '/sitemap-' + item.path + '-' + i + '.xml' %></loc>
+            </sitemap>
+        <% } %>
+    <% }) %>
+</sitemapindex>

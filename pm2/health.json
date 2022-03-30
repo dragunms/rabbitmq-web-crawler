@@ -1,0 +1,18 @@
+{
+    "apps": [
+        {
+            "namespace": "health",
+            "name": "schedule-health",
+            "script": "index.js",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "health",
+                "SERVICES": ["schedule"]
+            }
+        }
+    ]
+}

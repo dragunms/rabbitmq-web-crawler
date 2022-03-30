@@ -1,0 +1,83 @@
+<div>
+    <table
+            cellspacing="0" cellpadding="0" border="0"
+            style="
+                color: rgb(0, 0, 0);
+                font-family: Arial;
+                font-size: medium;
+                background-color: #fff;
+                border-collapse: collapse;
+                min-width: 600px;
+                width:100%;
+            "
+    >
+        <tbody>
+
+        <%- include('../header'); %>
+
+        <tr>
+        <td
+          style="
+            padding-bottom: 14px;
+            text-align: center;
+            background-color: #fff;
+          "
+        >
+          <h2 style="font-size: 1.4em; font-weight: 600; margin: 0">
+            Verify your email address
+          </h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td
+          style="
+            padding-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+          "
+        >
+          <span
+            style="
+              font-size: 0.9em;
+              margin: 0;
+              font-weight: 600;
+              color: #a19b9e;
+            "
+          >
+            Please confirm that you want to use this as your account
+            email address. Once it's done you will be able to access your
+            account!
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 10px; text-align: center; background-color: #fff">
+          <table
+            style="margin: 0 auto; padding: 10px; border: 3px solid #0078d4"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 0.9em;
+                    color: #000000;
+                    padding-left: 0.625em;
+                  "
+                >
+                  <span style="letter-spacing: 0.625em"><%= otp %></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+        <%- include('../footer'); %>
+
+        </tbody>
+    </table>
+</div>

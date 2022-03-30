@@ -1,0 +1,66 @@
+{
+    "apps": [
+        {
+            "namespace": "dev",
+            "name": "worker-dev",
+            "script": "index.js",
+            "instances": "max",
+            "exec_mode": "cluster",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "anime_en",
+                "SERVICES": ["worker"]
+            }
+        },
+        {
+            "namespace": "dev",
+            "name": "schedule-dev",
+            "script": "index.js",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "anime_en",
+                "SERVICES": ["schedule"]
+            }
+        },
+        {
+            "namespace": "dev",
+            "name": "dev-account",
+            "script": "index.js",
+            "instances": "2",
+            "exec_mode": "cluster",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "account",
+                "SERVICES": ["api"]
+            }
+        },
+        {
+            "namespace": "anime_en",
+            "name": "api-anime_en",
+            "script": "index.js",
+            "instances": "2",
+            "exec_mode": "cluster",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "anime_en",
+                "SERVICES": ["api"]
+            }
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "apps": [
+        {
+            "namespace": "anime_en",
+            "name": "worker-anime_en",
+            "script": "index.js",
+            "instances": "max",
+            "exec_mode": "cluster",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "anime_en",
+                "SERVICES": ["worker"]
+            }
+        },
+        {
+            "namespace": "anime_en",
+            "name": "schedule-anime_en",
+            "script": "index.js",
+            "wait_ready": true,
+            "listen_timeout": 2000,
+            "instance_var": "INSTANCE_ID",
+            "log_date_format": "DD-MM-YYYY HH:mm Z",
+            "watch": false,
+            "env": {
+                "APP": "anime_en",
+                "SERVICES": ["schedule"]
+            }
+        }
+    ]
+}

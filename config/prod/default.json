@@ -1,0 +1,160 @@
+{
+  "ENV": {
+    "SECRET_KEY": "e4078fd6afdacc3443d47a721e5024be",
+    "PUBLIC_KEY": "eb4205e127a74d3443ccadfa6df8704e",
+    "STORAGE_DIR": "/home/storage",
+    "TEMPS_DIR": "/home/storage",
+    "ADMIN_URL": "https://kimochi.cloudazure.cc",
+    "ACCOUNT_URL": "https://account.cloudazure.cc/v1",
+    "BYPASS_URL": "https://bypass.cloudazure.cc/v1",
+    "API_URL": "https://api.cloudazure.cc/v1"
+  },
+  "COOKIE_OPTIONS": {
+    "domain": "cloudazure.cc"
+  },
+  "PORT": {
+    "ASSET": 4000,
+    "UPLOAD": 4001,
+    "ACCOUNT": 4002,
+    "BYPASS": 4003,
+    "MOVIE_EN": 5001,
+    "ANIME_EN": 5002,
+    "DRAMA_EN": 5003,
+    "MOVIE_ES": 5004,
+    "ANIME_ES": 5005
+  },
+  "CORS_WHITE_LIST": [
+    "localhost",
+    "cloudazure.cc",
+    "drama9.me",
+    "dramacool.id",
+    "soap2day.me"
+  ],
+  "CONNECTION": {
+    "MONGO": {
+      "account": {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "account",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      },
+      "bypass": {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "bypass",
+        "shard": [
+          {
+            "host": "104.225.221.140",
+            "port": "27017"
+          }
+        ]
+      },
+      "movie_en":  {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "movie_en",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      },
+      "drama_en":  {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "drama_en",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      },
+      "anime_en":  {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "anime_en",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      },
+      "movie_es":  {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "anime_es",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      },
+      "anime_es":  {
+        "prefix": "film",
+        "username": "apps",
+        "password": "4G8?9eWJ!3",
+        "database": "anime_es",
+        "shard": [
+          {
+            "host": "45.14.226.67",
+            "port": "27017"
+          }
+        ]
+      }
+    },
+    "REDIS": {
+      "local": {
+        "prefix": "film",
+        "host": "127.0.0.1",
+        "port": "6379"
+      }
+    },
+    "RABBIT_MQ": {
+      "system": {
+        "prefix": "film",
+        "host": "45.14.226.67",
+        "username": "apps",
+        "password": "4G8?9eWJ!3"
+      }
+    }
+  },
+  "EMAIL": {
+    "GMAIL": {
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "secure": false,
+      "auth": {
+        "user": "auto.verify.info@gmail.com",
+        "pass": "djalforwicdceawx"
+      }
+    }
+  },
+  "FACEBOOK_APP": {
+    "APP_SECRET": "28ea6c7814b5a24b377c3c51bcb2f5b5",
+    "APP_ID": "176527911118397"
+  },
+  "GOOGLE_APP": {
+    "APP_SECRET": "VTe_c52MBGKWWeCo7dNfMONk",
+    "APP_ID_WEB": "984277918980-lgtalmpd9h8hgetu1kt3g1mm939b8iqq.apps.googleusercontent.com"
+  },
+  "TELEGRAM": {
+    "TOKEN": "808182577:AAHbkxFtiOLFPnBl3ph9mBS7OPLoInZ7NBo",
+    "ERROR_CHANNEL": "-1001399031346",
+    "DEBUG_CHANNEL": "-1001186358896"
+  }
+}
